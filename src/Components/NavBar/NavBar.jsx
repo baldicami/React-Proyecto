@@ -9,13 +9,14 @@ function Navbar() {
         </h2>
         <ul>
             <li>
-                <a href=""> Mangas</a>
+                <a href="">Mangas</a>
             </li>
             <li>
-                <a href="">Manhwas</a>
+                <a href="">Comics
+                </a>
             </li>
             <li>
-                <a href="">Manhuas</a>
+                <a href="">Novelas</a>
             </li>
             <li>
                 <CartWidget imgurl="https://www.pngitem.com/pimgs/m/340-3406807_icono-carrito-de-supermercado-png-transparent-png.png" height="20px"/>
