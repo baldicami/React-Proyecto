@@ -1,22 +1,23 @@
 import React from 'react'
 import CartWidget from './CartWidget'
+import "./NavBar.css"
+import {Link} from "react-router-dom"
 
 function Navbar() {
   return (
     <nav>
-        <h2>
-            Mi tienda
-        </h2>
+        <Link to="/"> 
+            <h2>Plantitas</h2>
+        </Link>
         <ul>
-            <li>
-                <a href="">Mangas</a>
+            <li> 
+                <Link to="/category/Interior">Interior</Link>
             </li>
             <li>
-                <a href="">Comics
-                </a>
+                <Link to="/category/Exterior">Exterior</Link>
             </li>
             <li>
-                <a href="">Novelas</a>
+                <Link to="/">Todas</Link>
             </li>
             <li>
                 <CartWidget imgurl="https://www.pngitem.com/pimgs/m/340-3406807_icono-carrito-de-supermercado-png-transparent-png.png" height="20px"/>

@@ -1,0 +1,26 @@
+nav{   
+    background-color: hsla(115, 18%, 72%, 0.817);
+    font-family: monospace;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    align-items: center;
+}
+ul{
+    list-style-type: none;
+    display: inline-flex;
+    align-items: center;
+}
+li{
+    margin: 1.6rem;
+    padding: 1rem;
+    border-radius: 30%;
+    font-size: 1rem;
+    background-color: aliceblue;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+

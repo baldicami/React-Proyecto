@@ -1,0 +1,8 @@
+.btn{
+    border-radius: 15%;
+    border-style: solid;
+    border-color: hsla(137, 24%, 72%, 0.783) ;
+    font-family: monospace;
+    font-size: small;
+    cursor: pointer;
+}
