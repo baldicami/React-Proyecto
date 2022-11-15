@@ -20,15 +20,13 @@ function ItemDetailContainer() {
     [] );
 
   return (
-    <div className='item-list'>
+    <div className='detailContainer'>
       <ItemDetail 
       product={product}
       imgurl={product.img} 
       title={product.title}
       price={product.price}
       description={product.description}
-
-      
       />
     </div>
   )
