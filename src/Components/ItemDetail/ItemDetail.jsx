@@ -1,18 +1,28 @@
 import React from 'react'
-import Button from '../Button/Button'
 import "./ItemDetail.css"
+import ItemCount from '../Items/ItemCount'
+import {useContext} from "react";
+import { cartContext} from "../../Context/cartContext";
 
-function ItemDetail(props) {
+function ItemDetail({product}) {
+  const { addToCart } = useContext(cartContext)
+
+  function onAddToCart(count){
+  alert(`Agregaste ${count} productos al carrito.`)
+  
+  addToCart(product, count)
+  }
+
   return (
     <div className='detailCard'>
-      <div className="card-img-detail">
-        <img  src={props.imgurl} alt={props.title} />
-      </div>
+        <img  src={product.img} alt={product.title} className="card-img-detail"/>
       <div className='description-detail'>
-        <h3>{props.title}</h3>
-        <p>{props.price}</p>
-        <h4>{props.description} </h4>
-        <Button>Agregar al carrito</Button>
+        <h3>{product.title}</h3>
+        <p>{product.price}</p>
+        <h4>{product.description} </h4>
+        <div>
+        <ItemCount onAddToCart={onAddToCart} stock={product.stock}/>
+        </div>
       </div>
     </div>
 

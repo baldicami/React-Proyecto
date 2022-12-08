@@ -1,0 +1,13 @@
+.btCarrito{
+    border-radius: 15%;
+    border-style: solid;
+    border-color: hwb(138 49% 41% / 0.973) ;
+    font-family: monospace;
+    font-size: small;
+    cursor: pointer;
+}
+.count{
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 6px;
+}

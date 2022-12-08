@@ -34,3 +34,6 @@
     border-top-right-radius: 30%
     ;
 }
+.card p{
+    margin-top: 2px;
+}

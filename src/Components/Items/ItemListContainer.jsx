@@ -28,6 +28,7 @@ function ItemListContainer() {
             title={product.title}
             price={product.price}
             category={product.category}
+            stock={product.stock}
           /> 
         )
       })

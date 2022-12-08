@@ -2,8 +2,12 @@ import React from 'react'
 import "./Button.css"
 
 function Button(props) {
+
+
   return (
-    <button className='btn'>
+    <button 
+    onClick={props.onClick}
+    className='btn'>
         {props.children}
     </button>
   );
