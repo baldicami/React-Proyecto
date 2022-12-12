@@ -1,5 +1,5 @@
 # E-commerce React App	
-Proyecto de tienda online de plantas. Desarrollado cara curso de CoderHouse React.
+Proyecto de tienda online de plantas. Desarrollado para curso de CoderHouse React.
 
 # Componentes
 
