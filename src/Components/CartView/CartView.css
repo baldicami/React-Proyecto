@@ -1,0 +1,25 @@
+table {
+    width: 100%;
+ }
+ th, td {
+    width: 25%;
+    justify-content: center;
+    text-align: center;
+    border-bottom: solid;
+    border-color: #bec6ce;
+    padding: 10px;
+ }  
+
+.cart-container{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 50px;
+    background-color: rgb(206, 220, 216);
+    padding: 10px 35px;
+    font-family: monospace;
+}
+.emptyCart{
+    text-align: center;
+    margin-top: 100px;
+}

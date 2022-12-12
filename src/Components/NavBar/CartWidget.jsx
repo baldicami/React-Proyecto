@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom';
 import { cartContext } from "../../Context/cartContext";
 
 function CartWidget(props) {
@@ -6,10 +7,10 @@ function CartWidget(props) {
   return (
     
     <div>
+      <Link to="/cart"> 
         <img src={props.imgurl} alt="carrito" height={props.height} />
-        <span>
-          {myContext.itemsInCart()}
-        </span>
+        <span> {myContext.itemsInCart()}</span>
+      </Link>
     </div>
   )
 }

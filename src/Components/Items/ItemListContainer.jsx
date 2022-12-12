@@ -1,38 +1,37 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import Item from './Item'
+
 import "./ItemListContainer.css"
-import getItems from '../../Services/MockService'
+import getItems, {getItemByCategory} from '../../Services/Firestore'
 import { useParams } from "react-router-dom"
+import ItemList from './ItemList'
+import Loader from '../Loaders/Loader'
 
 function ItemListContainer() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(null);
   const {idCategory} = useParams()
 
+
   async function getItemsAsync(){
-    let response = await getItems(idCategory)
-    setProducts(response)
+    if(!idCategory){
+      let response = await getItems()
+      setProducts(response)
+    }
+    else{
+      let response = await getItemByCategory(idCategory)
+      setProducts(response)
+    }
+    
+    
   }
   useEffect(() => {
       getItemsAsync()
       }, [idCategory]);
 
   return (
-    <div className='listContainer'>
-      {products.map((product) => {
-        return(
-          <Item
-            key={product.id}
-            id={product.id}
-            imgurl={product.img}
-            title={product.title}
-            price={product.price}
-            category={product.category}
-            stock={product.stock}
-          /> 
-        )
-      })
-      }
+    <div >
+      { products ? <ItemList products={products}/> : <Loader/>}
+      
     </div>
   )
 }

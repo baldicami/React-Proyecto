@@ -1,6 +1,7 @@
 .detailContainer{
+    width: 100%;
     display: flex;
     justify-content: center;
     padding: 2rem;
-    
+    background-color: hsl(133, 100%, 98%);
 }
